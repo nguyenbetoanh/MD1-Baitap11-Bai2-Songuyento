@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num = prompt(" nhap mot so: ");
+  let count = 0, check = 0, result = "";
+
+  function kiemTraSoNguyen(num) {
+    let kt = 1;
+    if (num < 2) return kt = 0;
+    let N = 2;
+    while (num>N) {
+      if (num % N == 0) {
+        kt = 0;
+        break;
+      }
+      N++;
+    }
+    return kt;
+  }
+
+  while (count < num) {
+    check = kiemTraSoNguyen(count);
+    if (check == 1) {
+      result += count + " ";
+    }
+    count++;
+  }
+  alert(result)
+</script>
+
+</body>
+</html>
